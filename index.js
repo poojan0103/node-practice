@@ -2,13 +2,14 @@ const express = require('express');
 const mongoose = require("mongoose");
 const app = express()
 const productroutes = require("./routes/product route")
-
+const userroutes = require("./routes/userRoutes")
 
 const bodyParser = require('body-parser')
 
 const PORT = 3000
 app.use(express.json())
 app.use('/product',productroutes)
+app.use('/user',userroutes)
 app.use(bodyParser.urlencoded({
     extended: true
 }))
