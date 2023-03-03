@@ -1,0 +1,6 @@
+db.user.insert({"StudentName":"Ishan","StudentId":"k_hut_2022","Branch":"CSE","PermanentAddress":[{"permaAddress":"xxxxxxxx","City":"Jaipur","PinCode":302022}, {"currAddress": "pppppp","City": "Kota","PinCode": 324001}]}) 
+db.user.find({StudentName:"Ishan"},{"PermanentAddress.permaAddress":1,"PermanentAddress.currAddress":1}).pretty() 
+db.users.insertMany([{"name":"Ishan", "isVerified":true, "courseId":[ObjectId("63fefd63ad7102410f5032c1")]},{"name":"Bhavesh","isVerified":true,"courseId":[ObjectId("63fefd63ad7102410f5032c1"),ObjectId("63fefd63ad7102410f5032c2")]}]) 
+db.courses.updateMany({}, {$set: {userslist: [{userId:[ObjectId("63fefeb5ad7102410f5032c5"),ObjectId("63fefeb5ad7102410f5032c6")]}]}}) 
+
+mongodb://localhost:27017
